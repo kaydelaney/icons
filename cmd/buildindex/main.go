@@ -45,8 +45,10 @@ func main() {
 			if len(dir.Files) > 0 {
 				dir.saveIndex()
 			}
+			idx := strings.LastIndex(folder, "/")
 			dir = dirInfo{
 				path: folder,
+				Name: folder[idx+1:],
 			}
 		}
 
